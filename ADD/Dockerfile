@@ -1,0 +1,7 @@
+FROM almalinux:9
+RUN dnf install nginx
+RUN rm -rf /usr/share/nginx/html/index.html
+ADD https://github.com/Manoharreddy1481 /usr/share/nginx/html/index.html
+RUN usermod +r /usr/share/nginx/html/index.html
+CMD [ "nginx", "-g", "daemon off;"]
+ADD sample-1.tar /tmp/
