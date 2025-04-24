@@ -1,5 +1,5 @@
 ARG version
-FROM almalinux:${version}
+FROM almalinux:$(version)
 ARG Name="Manohar" \
     NickName="Lucky@1481"
 RUN echo "Name : $Name , NickName : $NickName"
